@@ -1,0 +1,19 @@
+staff list can overload cpu and ram
+
+
+سیستم عامل اتومات
+اسم سرور
+اتورنک
+تایم بیکاری
+کشور اتومات
+مولتی رنک
+
+
+چنل زندان
+
+
+
+
+
+client_input_hardware=1 
+

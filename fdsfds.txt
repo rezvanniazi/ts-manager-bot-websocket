@@ -1,0 +1,55 @@
+
+
+client_output_muted=127.0.0.1 
+client_outputonly_muted=0 
+client_input_hardware=0 
+client_output_hardware=1 
+client_meta_data client_is_recording=0 
+client_login_name=TeamSpeakUser
+ client_database_id=4 
+ clid=1 
+ client_channel_group_id=14 
+ client_servergroups=3,9
+  client_created=1760971122
+   client_lastconnected=1760972093
+    client_totalconnections=3 
+    client_away=0 
+    client_away_message 
+    client_type=0 
+    client_type_exact=0 
+    client_flag_avatar 
+    client_talk_power=75 
+    client_talk_request=0 
+    client_talk_request_msg 
+    client_description 
+    client_is_talker=0 
+    client_month_bytes_uploaded=0 
+    client_month_bytes_downloaded=0 
+    client_total_bytes_uploaded=0 
+    client_total_bytes_downloaded=0 
+    client_total_online_time=840 
+    client_month_online_time=840 
+    client_is_priority_speaker=0 
+    client_unread_messages=0 
+    client_nickname_phonetic 
+    client_needed_serverquery_view_power=0 
+    client_icon_id=0 
+    client_is_channel_commander=0 
+    client_country=UNKNOWN
+    client_channel_group_inherited_channel_id=0 
+    client_badges 
+    client_myteamspeak_id 
+    client_integrations 
+    client_teaforo_id=0 
+    client_teaforo_name 
+    client_teaforo_flags=0 
+    client_owner=0 
+    client_bot_type=0 
+    player_state=0 
+    player_volume=1 
+    client_playlist_id=0 
+    client_disabled=0 
+    client_uptime_mode=0 
+    client_flag_notify_song_change=1 
+    cid=4 
+    lient_idle_time=90185
