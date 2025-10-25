@@ -121,6 +121,7 @@ class TsManagerBotService {
             try {
                 const { templateName } = validate(Joi.object(schema.deleteBot), payload)
                 const bot = TsManagerBot.template.get(templateName)
+
                 if (!bot) {
                     const row = await TsManagerBots.findOne({ where: { template_name: templateName } })
                     if (!row) {
@@ -151,11 +152,16 @@ class TsManagerBotService {
             try {
                 const { templateName } = validate(Joi.object(schema.reconnectBot), payload)
                 let bot = TsManagerBot.template.get(templateName)
+                console.log(bot)
+
                 if (!bot) {
                     const row = await TsManagerBots.findOne({ where: { template_name: templateName } })
+
+                    console.log(row)
+
                     if (!row) {
                         const response = { ok: false, error: "NOT_FOUND" }
-                        return cb ? cb(response) : socket.emit(EVENT_NAMES.CONNECT + "_error", response)
+                        return cb ? cb(response) : socket.emit(EVENT_NAMES.RECONNECT + "_error", response)
                     }
                     bot = new TsManagerBot(row.template_name, row.conn, row.channels)
                 }
@@ -166,8 +172,9 @@ class TsManagerBotService {
 
                 const response = { ok: true, data: { templateName, connected: bot.connected === true } }
                 cb ? cb(response) : socket.emit(EVENT_NAMES.RECONNECT + "_success", response)
-            } catch {
-                const response = { ok: false, error: "INVALID_PAYLOAD" }
+            } catch (err) {
+                console.log(err)
+                const response = { ok: false, error: "CONNECT_FAILED" }
                 cb ? cb(response) : socket.emit(EVENT_NAMES.RECONNECT + "_error", response)
             }
         })

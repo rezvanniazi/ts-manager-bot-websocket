@@ -87,11 +87,7 @@ class SocketServer {
             // Stop dynamic date updates
             dynamicDate.destroy()
 
-            // Close server
-            this.server.close(() => {
-                console.log("Server closed gracefully")
-                process.exit(0)
-            })
+            process.exit(0)
         } catch (error) {
             console.error("Error during graceful shutdown:", error)
             process.exit(1)
